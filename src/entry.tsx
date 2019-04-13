@@ -1,8 +1,13 @@
-import Hello from './hello'
-import * as React from 'react'
-import * as ReactDOM from 'react-dom'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Outer from "./Outer";
+import {WithStore} from "./Store";
+
+function App() {
+  return <WithStore initStore={{message: 'default'}}><Outer/></WithStore>
+}
 
 ReactDOM.render(
-    <Hello/>,
-    document.body
+  <App/>,
+  document.body
 )

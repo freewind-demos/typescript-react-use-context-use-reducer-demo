@@ -1,7 +1,7 @@
-TypeScript React "useRef" Demo
+TypeScript React "useContext" "useReducer" Demo
 =================================
 
-使用`useRef`可以让我们使用const来持有一个可能会发生变化的`ref`，并使用`.current`拿到当前最新的element
+使用`useContext`和`useReducer`来实现整个应用可用的全局store，类似于一个简化版的redux.
 
 ```
 npm install
