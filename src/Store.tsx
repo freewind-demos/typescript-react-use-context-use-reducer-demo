@@ -5,7 +5,7 @@ export type Store = {
   message: string
 }
 
-type Action = {
+export type Action = {
   type: 'set-message',
   newMessage: string
 }
@@ -24,5 +24,5 @@ type Props = {
 
 export function WithStore({initStore, children}: Props) {
   const [store, dispatch] = useReducer(reducer, initStore)
-  return <StoreContext.Provider value={{...store, dispatch}}>{children}</StoreContext.Provider>
+  return <StoreContext.Provider value={[store, dispatch]}>{children}</StoreContext.Provider>
 }

@@ -2,10 +2,10 @@ import React, {useContext} from "react";
 import {StoreContext} from "./StoreContext";
 
 export default function Inner() {
-  const store = useContext(StoreContext)
+  const [store, dispatch] = useContext(StoreContext)
 
   function onChange(event: React.ChangeEvent<HTMLInputElement>) {
-    store.dispatch({
+    dispatch({
         type: 'set-message',
         newMessage: event.currentTarget.value
       }
